@@ -98,7 +98,7 @@ export function TeamBuilderPanel() {
           <p className="break-words text-sm leading-6 text-muted-foreground dark:text-slate-300">
             {team.length === 0
               ? "Add Pokemon to begin squad analysis."
-              : "Score is based on party size, type diversity, coverage, duplicate primary types, and weakness pressure. Duplicate primary types reduce overall balance."}
+              : "Your party pulse rises as the lineup grows, spreads its types, covers more matchups, and avoids sharing too many weak spots."}
           </p>
         </CardContent>
       </Card>
@@ -241,11 +241,11 @@ export function TeamBuilderPanel() {
               items={insights.strongestTypes.map(formatPokemonName)}
             />
             <InsightBlock
-              title="Duplicate primary types"
-              empty="No duplicate primary types yet."
+              title="Overlapping roles"
+              empty="No overlapping type leads yet."
               items={insights.duplicatePrimaryTypes.map(
                 (entry) =>
-                  `Multiple ${formatPokemonName(entry.type)}-type leads detected. Consider diversifying your party.`,
+                  `Multiple ${formatPokemonName(entry.type)}-type leads are in the party. Try adding a different lead type.`,
               )}
             />
             <InsightBlock

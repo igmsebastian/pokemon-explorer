@@ -18,6 +18,10 @@ test.describe("mobile bottom navigation", () => {
     await expect(page.getByTestId("mobile-nav-explore")).toBeVisible()
     await expect(page.getByTestId("mobile-nav-mystery-pokemon")).toBeVisible()
     await expect(page.getByTestId("mobile-nav-team")).toBeVisible()
+    await expect(page.getByTestId("mystery-pokemon-icon")).toHaveAttribute(
+      "src",
+      "/mystery.png",
+    )
     await expect(
       page.getByTestId("mobile-nav-team").getByTestId("pokeball-icon"),
     ).toBeVisible()

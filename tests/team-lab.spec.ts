@@ -136,7 +136,9 @@ test("duplicate Pokemon are allowed but reduce Squad Readiness", async ({
   await expect(page.getByTestId("type-effectiveness")).toContainText("Grass x1")
   await page.getByRole("button", { name: "Strategy Notes" }).click()
   await expect(page.getByTestId("strategy-notes")).toBeVisible()
-  await expect(page.getByText(/Multiple Grass-type leads detected/i)).toBeVisible()
+  await expect(page.getByTestId("strategy-notes")).toContainText(
+    "Multiple Grass-type leads are in the party.",
+  )
 })
 
 test("Team Lab shows type effectiveness, matchup, and battle preview", async ({

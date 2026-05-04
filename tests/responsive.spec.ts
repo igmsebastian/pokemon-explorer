@@ -55,7 +55,7 @@ test.describe("mobile responsive UX", () => {
     await expect(page.getByTestId("mobile-filter-sheet")).toBeVisible()
     await expect(page.getByTestId("pokemon-type-filter").last()).toBeVisible()
     await expect(page.getByTestId("pokemon-filter-reset")).toBeVisible()
-    await page.getByTestId("pokemon-filter-apply").click()
+    await page.getByRole("button", { name: "Close filters" }).click()
     await expect(page.getByRole("heading", { name: "Pokemon Filters" })).toBeHidden()
 
     await page.evaluate(() => window.scrollTo(0, 0))

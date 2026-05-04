@@ -114,13 +114,13 @@ export function PokemonSearchPanel({
             Reset filters
           </Button>
           <SheetClose asChild>
-              <Button
-                type="button"
-                data-testid="pokemon-filter-apply"
-                className="h-11 w-full bg-primary text-primary-foreground hover:bg-primary/90 active:scale-[0.98] dark:bg-pokemon-yellow dark:text-slate-950 dark:hover:bg-pokemon-yellow/90"
-              >
-                Apply filters
-              </Button>
+            <Button
+              type="button"
+              data-testid="pokemon-filter-apply"
+              className="h-11 w-full bg-primary text-primary-foreground hover:bg-primary/90 active:scale-[0.98] dark:bg-pokemon-yellow dark:text-slate-950 dark:hover:bg-pokemon-yellow/90"
+            >
+              Close filters
+            </Button>
           </SheetClose>
         </div>
       </SheetContent>

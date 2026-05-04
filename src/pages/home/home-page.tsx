@@ -54,11 +54,11 @@ export function HomePage() {
         </div>
         <div className="rounded-lg border border-secondary/25 bg-secondary/10 p-4 text-sm text-foreground shadow-sm dark:border-pokemon-yellow/30 dark:bg-pokemon-yellow/10 dark:text-yellow-50">
           <p className="font-bold text-secondary dark:text-pokemon-yellow">
-            Lab protocol
+            Field notes
           </p>
           <p className="mt-2 text-muted-foreground dark:text-slate-200">
-            Cards hydrate through cached detail queries, while the search panel
-            uses indexed Pokemon names and type endpoints for quick filtering.
+            Spot standout Pokemon, follow their type personality, and keep the
+            best finds ready for your next squad idea.
           </p>
         </div>
       </div>

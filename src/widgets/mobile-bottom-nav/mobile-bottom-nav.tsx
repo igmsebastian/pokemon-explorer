@@ -92,7 +92,12 @@ export function MobileBottomNav() {
             }}
           >
             <span className="grid size-14 place-items-center rounded-full border border-primary/60 bg-card shadow-lg shadow-primary/15 dark:border-pokemon-yellow/60 dark:bg-slate-900 dark:shadow-pokemon-yellow/15">
-              <img src="/pokeball.svg" alt="" className="size-9" />
+              <img
+                src="/mystery.png"
+                alt=""
+                data-testid="mystery-pokemon-icon"
+                className="size-12 object-contain"
+              />
             </span>
             Mystery
           </button>

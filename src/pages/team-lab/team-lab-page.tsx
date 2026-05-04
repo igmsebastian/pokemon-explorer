@@ -47,12 +47,11 @@ export function TeamLabPage() {
         <div className="rounded-lg border border-pokemon-blue/30 bg-pokemon-blue/10 p-4 text-sm text-foreground shadow-sm dark:border-pokemon-blue/40 dark:text-blue-50">
           <p className="flex items-center gap-2 font-bold text-foreground dark:text-white">
             <Zap className="size-4 text-primary dark:text-pokemon-yellow" />
-            Creative scoring model
+            Squad pulse
           </p>
           <p className="mt-2 text-muted-foreground dark:text-slate-200">
-            The lab allows duplicate Pokemon, then weighs party size, duplicate
-            primary types, diversity, weaknesses, and missing coverage hints in
-            one live panel.
+            Mix your favorites, watch the lineup settle into shape, and tune a
+            party that feels ready for the next route.
           </p>
         </div>
       </div>
