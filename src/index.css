@@ -1,0 +1,150 @@
+@import "@fontsource-variable/geist";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+  }
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 0 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 221 83% 53%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 40%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --chart-1: 0 84% 55%;
+    --chart-2: 221 83% 53%;
+    --chart-3: 45 100% 50%;
+    --chart-4: 155 56% 42%;
+    --chart-5: 280 50% 50%;
+    --radius: 0.75rem;
+    --sidebar: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 0 84% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 221 83% 53%;
+    --scrollbar-track: rgba(0, 0, 0, 0.05);
+    --scrollbar-thumb: rgba(239, 68, 68, 0.7);
+    --scrollbar-thumb-hover: rgba(220, 38, 38, 0.9);
+    --scrollbar-glow: rgba(239, 68, 68, 0.35);
+  }
+  .dark {
+    --background: 229 64% 6%;
+    --foreground: 210 40% 98%;
+    --card: 224 50% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 50% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 48 100% 51%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 35% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 35% 16%;
+    --muted-foreground: 215 20% 72%;
+    --accent: 235 54% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 28% 18%;
+    --input: 222 28% 20%;
+    --ring: 48 100% 51%;
+    --chart-1: 48 100% 51%;
+    --chart-2: 235 54% 62%;
+    --chart-3: 0 100% 60%;
+    --chart-4: 155 56% 50%;
+    --chart-5: 280 50% 65%;
+    --sidebar: 224 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 235 54% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 35% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 28% 18%;
+    --sidebar-ring: 48 100% 51%;
+    --scrollbar-track: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb: rgba(250, 204, 21, 0.8);
+    --scrollbar-thumb-hover: rgba(250, 204, 21, 1);
+    --scrollbar-glow: rgba(250, 204, 21, 0.4);
+  }
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    scrollbar-width: thin;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar:horizontal {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      var(--scrollbar-thumb),
+      var(--scrollbar-thumb-hover)
+    );
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    box-shadow:
+      0 0 6px var(--scrollbar-glow),
+      inset 0 0 2px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+    box-shadow:
+      0 0 10px var(--scrollbar-glow),
+      0 0 16px var(--scrollbar-glow),
+      inset 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+  html {
+    @apply scroll-smooth font-sans;
+  }
+  body {
+    @apply m-0 bg-background text-foreground antialiased;
+  }
+  #root {
+    min-height: 100svh;
+  }
+  img {
+    user-select: none;
+  }
+  ::selection {
+    @apply bg-pokemon-yellow text-slate-950;
+  }
+}
+
+@layer utilities {
+  .lab-grid {
+    background-image:
+      linear-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+}
